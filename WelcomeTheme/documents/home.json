@@ -1,0 +1,239 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "section",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-hero"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-eyebrow"
+          },
+          "content": "YOUR NEXT CHAPTER",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "h1",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "Welcome to something new.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-lede"
+          },
+          "content": "A clean starting point for your website. Simple pages, thoughtful details, and room to make it your own.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "div",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-actions"
+          },
+          "content": "",
+          "children": [
+            {
+              "descriptor": {
+                "name": "a",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {
+                "href": "/about",
+                "class": "welcome-button"
+              },
+              "content": "Discover more",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "a",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {
+                "href": "/contact",
+                "class": "welcome-text-link"
+              },
+              "content": "Say hello →",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "descriptor": {
+        "name": "section",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-grid",
+        "aria-label": "Highlights"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "article",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-card"
+          },
+          "content": "",
+          "children": [
+            {
+              "descriptor": {
+                "name": "span",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {
+                "class": "welcome-number"
+              },
+              "content": "01",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "h2",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {},
+              "content": "Start simple.",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "p",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {},
+              "content": "Everything you need for a welcoming first impression. Nothing gets in your way.",
+              "children": []
+            }
+          ]
+        },
+        {
+          "descriptor": {
+            "name": "article",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-card"
+          },
+          "content": "",
+          "children": [
+            {
+              "descriptor": {
+                "name": "span",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {
+                "class": "welcome-number"
+              },
+              "content": "02",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "h2",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {},
+              "content": "Make it yours.",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "p",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {},
+              "content": "Choose your title, accent color and contact details from the customization dashboard.",
+              "children": []
+            }
+          ]
+        },
+        {
+          "descriptor": {
+            "name": "article",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-card"
+          },
+          "content": "",
+          "children": [
+            {
+              "descriptor": {
+                "name": "span",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {
+                "class": "welcome-number"
+              },
+              "content": "03",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "h2",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {},
+              "content": "Grow from here.",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "p",
+                "props": {},
+                "renderer": ""
+              },
+              "attributes": {},
+              "content": "Add your own pages and content as your website takes shape.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

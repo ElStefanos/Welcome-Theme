@@ -1,0 +1,68 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "div",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-card"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-eyebrow"
+          },
+          "content": "EXPLORE",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "a",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "href": "/",
+            "class": "welcome-side-link"
+          },
+          "content": "Home",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "a",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "href": "/about",
+            "class": "welcome-side-link"
+          },
+          "content": "About",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "a",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "href": "/contact",
+            "class": "welcome-side-link"
+          },
+          "content": "Contact",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

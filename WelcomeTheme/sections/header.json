@@ -1,0 +1,117 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "div",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-header-inner"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "div",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-brand-group"
+          },
+          "content": "",
+          "children": [
+            {
+              "descriptor": {
+                "name": "a",
+                "props": {
+                  "setting": "site_title"
+                },
+                "renderer": ""
+              },
+              "attributes": {
+                "href": "/",
+                "class": "welcome-brand"
+              },
+              "content": "",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "p",
+                "props": {
+                  "setting": "tagline"
+                },
+                "renderer": ""
+              },
+              "attributes": {
+                "class": "welcome-tagline"
+              },
+              "content": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "descriptor": {
+            "name": "nav",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "aria-label": "Main navigation"
+          },
+          "content": "",
+          "children": [
+            {
+              "descriptor": {
+                "name": "a",
+                "props": {
+                  "active_page": "home"
+                },
+                "renderer": ""
+              },
+              "attributes": {
+                "href": "/",
+                "class": "welcome-nav-link"
+              },
+              "content": "Home",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "a",
+                "props": {
+                  "active_page": "about"
+                },
+                "renderer": ""
+              },
+              "attributes": {
+                "href": "/about",
+                "class": "welcome-nav-link"
+              },
+              "content": "About",
+              "children": []
+            },
+            {
+              "descriptor": {
+                "name": "a",
+                "props": {
+                  "active_page": "contact"
+                },
+                "renderer": ""
+              },
+              "attributes": {
+                "href": "/contact",
+                "class": "welcome-nav-link"
+              },
+              "content": "Contact",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

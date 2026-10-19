@@ -1,0 +1,49 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "div",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-card"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-eyebrow"
+          },
+          "content": "A SMALL REMINDER",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "h2",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "Make yourself at home.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "This optional sidebar is ready for a note, a useful link, or your next idea.",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

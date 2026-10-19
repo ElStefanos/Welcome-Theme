@@ -1,0 +1,107 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "section",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-hero"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-eyebrow"
+          },
+          "content": "A LITTLE ABOUT US",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "h1",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "Less noise. More meaning.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-lede"
+          },
+          "content": "We believe a great website starts with a clear idea and a warm welcome.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "descriptor": {
+        "name": "section",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-card welcome-story"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "h2",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "A place for your story.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "This is your space to introduce yourself, share what you do, and explain why it matters. Replace this starter text with your own story.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "Welcome is a small, flexible theme designed to give your next project a thoughtful beginning.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "a",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "href": "/contact",
+            "class": "welcome-text-link"
+          },
+          "content": "Let’s connect →",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

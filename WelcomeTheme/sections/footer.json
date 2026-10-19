@@ -1,0 +1,41 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "div",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-footer-inner"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {
+              "setting": "footer_text"
+            },
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "a",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "href": "/"
+          },
+          "content": "Back to home",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

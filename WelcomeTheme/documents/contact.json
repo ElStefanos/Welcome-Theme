@@ -1,0 +1,129 @@
+{
+  "blocks": [
+    {
+      "descriptor": {
+        "name": "section",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-hero"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-eyebrow"
+          },
+          "content": "LET’S TALK",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "h1",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "Good things start with a hello.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {
+              "setting": "contact_intro"
+            },
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-lede"
+          },
+          "content": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "descriptor": {
+        "name": "section",
+        "props": {},
+        "renderer": ""
+      },
+      "attributes": {
+        "class": "welcome-card welcome-contact"
+      },
+      "content": "",
+      "children": [
+        {
+          "descriptor": {
+            "name": "span",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-number"
+          },
+          "content": "01",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "h2",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {},
+          "content": "Get in touch",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "a",
+            "props": {
+              "contact_email": true,
+              "when": "valid_email"
+            },
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-email"
+          },
+          "content": "",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {
+              "when": "invalid_email"
+            },
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-muted"
+          },
+          "content": "Add a valid contact email in theme settings.",
+          "children": []
+        },
+        {
+          "descriptor": {
+            "name": "p",
+            "props": {},
+            "renderer": ""
+          },
+          "attributes": {
+            "class": "welcome-muted"
+          },
+          "content": "Send us an email. We will get back to you as soon as we can.",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
