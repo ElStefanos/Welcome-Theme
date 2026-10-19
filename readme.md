@@ -1,91 +1,85 @@
-# Development Build & Deploy Tool
-This tool automates the process of building and deploying your **Advanced Web Tools** package (plugins, themes, or systems) from your local development environment to a remote server. It packages your project into a zip file and can push it to a running instance for rapid testing.
-## Features
-- **Automated Packaging**: Creates a zip archive of your project based on your `manifest.json`.
-- **Remote Installation**: Deploys the package to a remote server for instant testing.
-- **Fast Build Mode**: Uses a caching system to package only the files that have changed, significantly speeding up the build process.
-- **Flexible Configuration**: Customize build paths, naming conventions, and remote server details.
+# Welcome Theme
 
-## Prerequisites
-- PHP installed on your system.
-- The `php-curl` extension must be enabled for remote installation.
-- The `php-zip` extension must be enabled for packaging.
+A starter theme for business websites built with Advanced Web Tools (AWT). Welcome Theme gives you Home, About, and Contact pages, shared navigation, and a responsive layout to adapt for your company or client project.
 
-## Setup & Configuration
-All configuration is handled in the file in your project's root. `build/dev_env.json`
-``` json
+Use it as a foundation for a company profile, service business, consultancy, or agency website. Replace the sample copy, apply your branding, and extend the pages as your business needs grow.
+
+## What's included
+
+- Home, About, and Contact pages at `/`, `/about`, and `/contact`.
+- Shared header and footer with active page navigation.
+- Configurable site title, tagline, accent color, contact details, and footer text.
+- Optional left and right sidebars controlled through ThemeEngine.
+- Editable URPC JSON content for every page and shared section.
+- Local CSS with no required JavaScript, external fonts, or images.
+
+The Contact page provides an email link. Add a separate integration if your project needs a contact form, booking, payments, or other business workflows.
+
+## Requirements
+
+| Component | Minimum version |
+| --- | --- |
+| AWT | 27.0.0 |
+| ThemeEngine | 1.0.4 |
+| URPC | 1.0.0 |
+
+## Get started
+
+Install and enable the required packages in your AWT site, then install the WelcomeTheme package. Open `/dashboard/customization`, select **WelcomeTheme**, and choose **Activate theme**.
+
+Set your business name, tagline, contact email, and accent color in the customization dashboard. Replace the sample page content with your own services, company story, and contact information before publishing.
+
+See the [installation and customization guide](WelcomeTheme/README.md) for package commands, editable files, and instructions for adding pages.
+
+## Project layout
+
+| Path | Purpose |
+| --- | --- |
+| `WelcomeTheme/` | Installable theme package |
+| `WelcomeTheme/documents/` | Home, About, and Contact content in URPC JSON |
+| `WelcomeTheme/sections/` | Shared header, footer, and optional sidebars in URPC JSON |
+| `WelcomeTheme/assets/theme.css` | Theme styles |
+| `WelcomeTheme/theme.php` | Pages, routes, section sources, and theme settings |
+| `WelcomeTheme/manifest.json` | Package identity, version, and dependencies |
+| `build/` | Local packaging and development deployment tools |
+
+## Build a package
+
+To package a customized version, install PHP with the ZIP extension and create `build/dev_env.json`:
+
+```json
+{
+  "release_folder": "releases",
+  "build_save_format": "<name>-<version>"
+}
+```
+
+Run from the repository root:
+
+```bash
+bash build.sh --no-install
+```
+
+On Windows, run `build.bat --no-install`. This creates `releases/WelcomeTheme-1.0.0.zip` without deploying it. Update the version in `WelcomeTheme/manifest.json` when preparing a new release.
+
+Use a full build for delivery to a client or a fresh installation. The optional `--fast` mode creates an incremental development archive that can omit unchanged files.
+
+## Development deployment
+
+For deployment to a development AWT instance, add the connection settings to `build/dev_env.json`:
+
+```json
 {
   "release_folder": "releases",
   "build_save_format": "<name>-<version>",
   "address": "http://localhost:3000",
   "remote_install_path": "/dev/install",
-  "devSecret": "12345678"
+  "devSecret": "replace-with-your-development-secret"
 }
 ```
-#### Configuration Options:
 
-| Key | Description |
-| --- | --- |
-| `release_folder` | The directory where your packaged `.zip` files will be saved. |
-| `build_save_format` | A template for your zip file's name. Supported placeholders: `<name>`, `<version>`, `<description>`, `<author>`, `<license>`. These are pulled from your `manifest.json`. |
-| `address` | The base URL of your remote test server (e.g., `http://my-test-site.com`). |
-| `remote_install_path` | The specific endpoint on the remote server that handles the package installation (e.g., `/dev/install`). |
-| `devSecret` | A secret key that must match the one on your remote server to authorize the installation. |
-## Usage
-Use the (Windows) or (Linux/macOS) scripts from your project's root directory to run the tool. `build.bat` `build.sh`
-### Windows
-``` bash
-build.bat [options]
-```
-### Linux / macOS
-First, make the script executable:
-``` bash
-chmod +x build.sh
-```
-Then, run it:
-``` bash
-./build.sh [options]
-```
-### Command-Line Options
-You can pass the following options to the build scripts:
-- `--install`: Automatically installs the package on the remote server after building. Without this flag, the script will only build the package and then ask for confirmation before installing.
-- `--fast`: Enables "Fast Build" mode. In this mode, the script only includes files that have been modified since the last build, making the process much quicker.
+Enable `DEBUG` and `REMOTE_INSTALL_FOR_DEVS` on that development instance and match its `dev_secret` to `devSecret`. PHP cURL is required for deployment. Run `bash build.sh --install` to build and deploy, or `bash build.sh` to be prompted after building. Keep the development installation endpoint disabled on production sites.
 
-### Examples
-**1. Build the package only:**
-``` bash
-# Windows
-build.bat
+## License
 
-# Linux / macOS
-./build.sh
-```
-**2. Build the package and automatically install it:**
-``` bash
-# Windows
-build.bat --install
-
-# Linux / macOS
-./build.sh --install
-```
-**3. Perform a fast build and install it:**
-``` bash
-# Windows
-build.bat --fast --install
-
-# Linux / macOS
-./build.sh --fast --install
-```
-## How "Fast Build" Works
-When you use the `--fast` flag, the script creates a cache file at `build/.file_cache.json`. This file stores a hash of each file included in the zip. On subsequent fast builds, the script checks each file against its cached hash. If the file hasn't changed, it's skipped. If it has changed (or is new), it's included in the package and its new hash is saved.
-To force a full rebuild, you can simply delete the `build/.file_cache.json` file.
-## Enabling Remote Installation (Server-Side)
-
-> **SECURITY WARNING**: This feature is for development purposes only. Ensure it is disabled in any production environment to prevent unauthorized code execution.
->
-
-To allow the script to install packages, you must configure your remote server:
-1. Open your server's `awt_config.php` file.
-2. Set `DEBUG` and `REMOTE_INSTALL_FOR_DEVS` to `true`.
-3. Ensure the `dev_secret` in `awt_config.php` matches the `devSecret` in your local file. `build/dev_env.json`
-
+The package manifest declares the MIT license.
